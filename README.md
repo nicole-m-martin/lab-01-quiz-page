@@ -20,7 +20,7 @@ HTML Setup:
 
   - Why? to inject/display the results to the user
 
-  1. Get DOM Elements
+  1. Grab DOM Elements
 
   - button
   - secret div
@@ -51,9 +51,14 @@ HTML Setup:
         - three times
         - write a 'countsAsYes' function, no copy and paste this way
 
-  - make a results string
-  - display that results string
+TRACK OVER TIME === LET  
+We need to **\_**track over time\_\_\_ how many correct answers the user got
 
-    - inject stuff into the 'textContent' of our secret box
+- why?
 
-    ( git push add this note)
+- make a results string
+- display that results string
+
+  - inject stuff into the 'textContent' of our secret box
+
+  ( git push add this note)
