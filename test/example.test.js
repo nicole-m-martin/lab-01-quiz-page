@@ -1,6 +1,4 @@
-
-
-import { countsAsAYes } from '../utils';
+import { countsAsAYes } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -18,7 +16,7 @@ test('it should return false when given a word that does not with y or Y', (expe
     const expected = false;
     
     const actual = countsAsAYes('nopeeee');
-    
+
     expect.equal(actual, expected);
 });
 
