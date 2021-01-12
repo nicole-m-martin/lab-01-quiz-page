@@ -47,6 +47,7 @@ h2 {
 h2 {
   margin-top: 5px;
   font-size: 2.3rem;
+  text-align: center;
 }
 
 content {
@@ -55,6 +56,16 @@ content {
 
 p {
   margin: var(--gutter);
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  margin: 10px;
 }
 
 .tiger-1 {
@@ -84,6 +95,10 @@ p {
   align-items: center;
 }
 
+.facts-list {
+  border: solid 2px;
+  background: #f6aa1c;
+}
 @keyframes pulse {
   20% {
     transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
