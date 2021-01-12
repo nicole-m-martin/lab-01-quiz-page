@@ -1,15 +1,11 @@
-// import functions and grab DOM elements
+import { countsAsAYes } from '../utils.js';
 
-
-// initialize state
 const quizBtn = document.getElementById('startQuiz');
+const resultsDiv = document.getElementById('answer');
 
 
-
-// set event listeners to update state and DOM
 quizBtn.addEventListener('click', () => {
-    // console.log('It works!!');
-    alert('Start the Quiz!!');
+    alert('Welcome To The Tiger Quiz!');
 
     const conformation = confirm('Are you ready?');
 
@@ -20,42 +16,23 @@ quizBtn.addEventListener('click', () => {
     }
 
     const firstName = prompt('What is your first name?');
-    console.log(firstName);
     const lastName = prompt('What is your last Name?');
-    console.log(lastName);
-
     const firstAns = prompt('Do tiger cubs stay with their mothers for two years, before going on their own?');
-
-    if (firstAns.charAt(0).toUpperCase() === 'Y') {
-        console.log("yesssssss");
-    } else {
-        console.log('nopeee');
-    }
-
     const secondAns = prompt('Are the largest population of tigers in Cambodia?');
-
-    if (secondAns.charAt(0).toUpperCase() !== 'Y') {
-        console.log("yesssssss");
-    } else {
-        console.log('nopeee');
-    }
-
     const thirdAns = prompt('Are there five color variants of tigers?');
-    
-    if (thirdAns.charAt(0).toUpperCase() !== 'Y') {
-        console.log("yesssssss");
-    } else {
-        console.log('nopeee');
-    }
-
     const fourthAns = prompt('Are tigers on the endangered species list?');
 
-    if (fourthAns.charAt(0).toUpperCase() === 'Y') {
-        console.log("yesssssss");
-    } else {
-        console.log('nopeee');
-    }
+    let correctAnswers = 0;
+    
+    if (countsAsAYes(firstAns)) correctAnswers++;
+    if (!countsAsAYes(secondAns)) correctAnswers++;
+    if (!countsAsAYes(thirdAns)) correctAnswers++;
+    if (countsAsAYes(fourthAns)) correctAnswers++;
 
+    const resultsText = `Congrats ${firstName} ${lastName}! You answered ${correctAnswers} right!`;
 
+    resultsDiv.textContent = resultsText;
 
 });
+
+
