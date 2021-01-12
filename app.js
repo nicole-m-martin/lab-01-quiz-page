@@ -1,4 +1,4 @@
-import { countsAsAYes } from '../utils.js';
+import { countsAsAYes } from './utils.js';
 
 const quizBtn = document.getElementById('startQuiz');
 const resultsDiv = document.getElementById('answer');
