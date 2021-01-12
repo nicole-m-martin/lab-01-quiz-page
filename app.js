@@ -5,6 +5,7 @@ const resultsDiv = document.getElementById('answer');
 
 
 quizBtn.addEventListener('click', () => {
+    // console.log('click worked');
     alert('Welcome To The Tiger Quiz!');
 
     const conformation = confirm('Are You Ready?');
